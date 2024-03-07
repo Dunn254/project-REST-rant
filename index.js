@@ -13,13 +13,11 @@ app.get('/', (req, res) => {
     res.send('Home')
 })
 
-app.get('*', (req, res) => {
-    res.render('error404').send('<h1>404 Page</h1>')
-})
+
 
 app.listen(process.envPORT)
 
-/*require('dotenv').config()
+require('dotenv').config()
 const express = require('express')
 const app = express()
 
@@ -32,6 +30,10 @@ app.use('/places', require('./controllers/places'))
 //routes
 app.get('/', (req, res) => {
     res.send('Hello world!')
+})
+
+app.get('*', (req, res) => {
+    res.render('error404').send('<h1>404 Page</h1>')
 })
 
 app.listen(process.env.PORT)*/
